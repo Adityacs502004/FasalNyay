@@ -1,1 +1,21 @@
 /* FasalNyay App Styling - Clean & Minimal */
+
+@media print {
+	body * {
+		visibility: hidden;
+	}
+
+	.print-draft,
+	.print-draft * {
+		visibility: visible;
+	}
+
+	.print-draft {
+		position: absolute;
+		inset: 0;
+		width: 100%;
+		border: 0;
+		box-shadow: none;
+		color: #111827;
+	}
+}
