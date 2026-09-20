@@ -1,5 +1,7 @@
 # 🌾 FasalNyay
 
+# Live : https://fasal-nyay.vercel.app/
+
 ### AI-Assisted Crop Grievance & Evidence Verification Platform
 
 **FasalNyay** is an AI-powered platform designed to help farmers document and submit crop-related grievances with reliable evidence. It acts as a digital **AI extension officer**, helping farmers understand what evidence is required, verify submitted documents and images, and identify inconsistencies before a claim is submitted.
