@@ -9,11 +9,10 @@ import weather_routes from './routes/weather.routes.js'
 import appeal_routes from './routes/appeal.routes.js'
 import reviewer_routes from './routes/reviewer.routes.js'
 
+dotenv.config()
 
 const app = express()
-const port = 3000
-
-dotenv.config();
+const port = process.env.PORT || 3000
 
 const allowedOrigins = (process.env.CORS_ORIGIN || 'http://localhost:5173')
     .split(',')
@@ -26,11 +25,22 @@ app.use(cors({
 }))
 app.use(express.json())
 
-app.use(user_details)
+app.use(user_details) 
+
 app.use(evidence_routes)
+
 app.use(guidelines_routes)
+
 app.use(locations_routes)
+
 app.use(weather_routes)
+
 app.use(appeal_routes)
+
 app.use(reviewer_routes)
+
+
+app.get('/health', (req, res) => res.json({ ok: true }))
+
+
 app.listen(port, () => console.log(`Example app listening on port ${port}!`))
